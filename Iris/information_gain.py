@@ -21,8 +21,8 @@ def split_iris(index, iris_sort):
 
 
 def value_lr(iris_l, iris_r):
-    np_l_list = iris_l[:, 4].tolist()
-    np_r_list = iris_r[:, 4].tolist()
+    np_l_list = iris_l[:, -1].tolist()
+    np_r_list = iris_r[:, -1].tolist()
     value_l = [np_l_list.count(0.0),
                np_l_list.count(1.0),
                np_l_list.count(2.0)]
