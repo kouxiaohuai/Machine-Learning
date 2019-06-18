@@ -3,5 +3,6 @@
 by Dr. Sebastian Raschka
 ### Preprocessing, Feature Selection and Extraction
 * [Why do we need to re-use training parameters to transform test data?](https://sebastianraschka.com/faq/docs/scale-training-test.html)
+* [When should I apply data normalization/standardization?](https://sebastianraschka.com/faq/docs/when-to-standardize.html)
 ### Tree models
 * [Why are implementations of decision tree algorithms usually binary and what are the advantages of the different impurity metrics?](https://sebastianraschka.com/faq/docs/decision-tree-binary.html)
