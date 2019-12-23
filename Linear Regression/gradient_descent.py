@@ -8,11 +8,10 @@ Created on Tue Jun 18 14:18:00 2019
 import matplotlib.pyplot as plt
 from matplotlib import cm
 import numpy as np
+from mpl_toolkits.mplot3d import Axes3D
 
-# rng = np.random.RandomState(42)
 x = 10 * np.random.rand(50)
-y = 2 * x - 1 + np.random.randn(50)
-plt.scatter(x, y)
+y = 2 * x - 1 + 5 * np.random.randn(50)
 
 
 def loss_function(theta_0, theta_1):
@@ -42,7 +41,7 @@ def gradient_1(theta_0, theta_1):
 
 
 eta = 0.02
-n_iterations = 1000
+n_iterations = 100
 theta_0 = np.random.randn()
 theta_1 = np.random.randn()
 lf = loss_function(theta_0, theta_1)
@@ -56,6 +55,13 @@ for iteration in range(n_iterations):
     theta_0_list.append(theta_0)
     theta_1_list.append(theta_1)
     lf_list.append(loss_function(theta_0, theta_1))
+
+plt.scatter(x, y)
+plt.plot(x, theta_1_list[0] * x + theta_0_list[0], label='Initialization')
+for i in range(n_iterations):
+    plt.plot(x, theta_1_list[i+1] * x + theta_0_list[i+1], alpha=0.1)
+
+plt.legend()
 
 fig = plt.figure()
 ax = plt.axes(projection='3d')
